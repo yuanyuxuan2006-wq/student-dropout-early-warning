@@ -32,6 +32,13 @@ enrolled units). The full write-up is in [REPORT.md](REPORT.md).
 ![Figure 1](figures/figure1_gradient_descent.png)
 ![Figure 2](figures/figure2_advisor_value_fairness.png)
 
+## Deep-learning extension
+
+A follow-up compares a PyTorch MLP with the from-scratch logistic regression on the same splits.
+The MLP does not do better: average F1 is 0.759 for the MLP and 0.770 for logistic regression.
+See [MLP_EXTENSION.md](MLP_EXTENSION.md); run it with `python run_mlp.py` (needs
+`requirements-mlp.txt`).
+
 ## How to run
 
 ```bash
@@ -61,6 +68,8 @@ missing, it is downloaded from UCI automatically.
 | `early_warning/experiment3.py` | Robustness over 5 seeds, hidden dropouts, error analysis, advisor contact list |
 | `early_warning/plots.py` | Figures 1 and 2 |
 | `tests/test_core.py` | Edge-case and correctness tests |
+| `early_warning/mlp.py`, `early_warning/experiment4.py`, `run_mlp.py` | MLP extension (Experiment 4, Figure 3) |
+| `tests/test_mlp.py` | MLP extension tests |
 
 ## Reproducibility
 
